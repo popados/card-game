@@ -1,0 +1,31 @@
+C:\Users\Sunil Khandwala\Documents\_Markdown Pages\csc-card-game\01-card-game\bin\Debug\net5.0\01-card-game.exe
+C:\Users\Sunil Khandwala\Documents\_Markdown Pages\csc-card-game\01-card-game\bin\Debug\net5.0\01-card-game.deps.json
+C:\Users\Sunil Khandwala\Documents\_Markdown Pages\csc-card-game\01-card-game\bin\Debug\net5.0\01-card-game.runtimeconfig.json
+C:\Users\Sunil Khandwala\Documents\_Markdown Pages\csc-card-game\01-card-game\bin\Debug\net5.0\01-card-game.runtimeconfig.dev.json
+C:\Users\Sunil Khandwala\Documents\_Markdown Pages\csc-card-game\01-card-game\bin\Debug\net5.0\01-card-game.dll
+C:\Users\Sunil Khandwala\Documents\_Markdown Pages\csc-card-game\01-card-game\bin\Debug\net5.0\ref\01-card-game.dll
+C:\Users\Sunil Khandwala\Documents\_Markdown Pages\csc-card-game\01-card-game\bin\Debug\net5.0\01-card-game.pdb
+C:\Users\Sunil Khandwala\Documents\_Markdown Pages\csc-card-game\01-card-game\obj\Debug\net5.0\01-card-game.csprojAssemblyReference.cache
+C:\Users\Sunil Khandwala\Documents\_Markdown Pages\csc-card-game\01-card-game\obj\Debug\net5.0\01-card-game.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sunil Khandwala\Documents\_Markdown Pages\csc-card-game\01-card-game\obj\Debug\net5.0\01-card-game.AssemblyInfoInputs.cache
+C:\Users\Sunil Khandwala\Documents\_Markdown Pages\csc-card-game\01-card-game\obj\Debug\net5.0\01-card-game.AssemblyInfo.cs
+C:\Users\Sunil Khandwala\Documents\_Markdown Pages\csc-card-game\01-card-game\obj\Debug\net5.0\01-card-game.csproj.CoreCompileInputs.cache
+C:\Users\Sunil Khandwala\Documents\_Markdown Pages\csc-card-game\01-card-game\obj\Debug\net5.0\01-card-game.dll
+C:\Users\Sunil Khandwala\Documents\_Markdown Pages\csc-card-game\01-card-game\obj\Debug\net5.0\ref\01-card-game.dll
+C:\Users\Sunil Khandwala\Documents\_Markdown Pages\csc-card-game\01-card-game\obj\Debug\net5.0\01-card-game.pdb
+C:\Users\Sunil Khandwala\Documents\_Markdown Pages\csc-card-game\01-card-game\obj\Debug\net5.0\01-card-game.genruntimeconfig.cache
+C:\Users\popad\OneDrive\desktop\git-clones\01-card-game\bin\Debug\net5.0\01-card-game.exe
+C:\Users\popad\OneDrive\desktop\git-clones\01-card-game\bin\Debug\net5.0\01-card-game.deps.json
+C:\Users\popad\OneDrive\desktop\git-clones\01-card-game\bin\Debug\net5.0\01-card-game.runtimeconfig.json
+C:\Users\popad\OneDrive\desktop\git-clones\01-card-game\bin\Debug\net5.0\01-card-game.runtimeconfig.dev.json
+C:\Users\popad\OneDrive\desktop\git-clones\01-card-game\bin\Debug\net5.0\01-card-game.dll
+C:\Users\popad\OneDrive\desktop\git-clones\01-card-game\bin\Debug\net5.0\01-card-game.pdb
+C:\Users\popad\OneDrive\desktop\git-clones\01-card-game\obj\Debug\net5.0\01-card-game.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\popad\OneDrive\desktop\git-clones\01-card-game\obj\Debug\net5.0\01-card-game.AssemblyInfoInputs.cache
+C:\Users\popad\OneDrive\desktop\git-clones\01-card-game\obj\Debug\net5.0\01-card-game.AssemblyInfo.cs
+C:\Users\popad\OneDrive\desktop\git-clones\01-card-game\obj\Debug\net5.0\01-card-game.csproj.CoreCompileInputs.cache
+C:\Users\popad\OneDrive\desktop\git-clones\01-card-game\obj\Debug\net5.0\01-card-game.dll
+C:\Users\popad\OneDrive\desktop\git-clones\01-card-game\obj\Debug\net5.0\refint\01-card-game.dll
+C:\Users\popad\OneDrive\desktop\git-clones\01-card-game\obj\Debug\net5.0\01-card-game.pdb
+C:\Users\popad\OneDrive\desktop\git-clones\01-card-game\obj\Debug\net5.0\01-card-game.genruntimeconfig.cache
+C:\Users\popad\OneDrive\desktop\git-clones\01-card-game\obj\Debug\net5.0\ref\01-card-game.dll

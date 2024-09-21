@@ -40,6 +40,7 @@ namespace CardGame01
             Console.ReadKey();
             FireDeck deck = new FireDeck();
             Shuffler shuffle = new Shuffler();
+            TurnCounter turner = new TurnCounter();
             shuffle.printDeckLen();
             Console.ReadKey();
             shuffle.shuffleFunction();
@@ -50,7 +51,8 @@ namespace CardGame01
             // deck.shuffleFunction();
             Card mycard = new ImpCard();
             mycard.printCard();
-            TurnCounter.gameStart(isGame, isTurn, turnCounter);
+            TurnCounter.gameStart();
+            Console.WriteLine("got here");
             Console.ReadKey();
 
 

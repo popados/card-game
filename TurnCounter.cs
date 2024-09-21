@@ -1,5 +1,6 @@
 
 using System;
+using static CardGame01.Card;
 
 
 
@@ -8,8 +9,8 @@ namespace CardGame01
 
     class TurnCounter
     {
-        public static bool isTurn;
-        public static bool isGame;
+        public static bool isTurn { get; set; }
+        public static bool isGame { get; set; }
         public static int turnCounter { get; set; }
 
         public static int playerOneMana { get; set; }
@@ -92,7 +93,7 @@ namespace CardGame01
             return turnCounter;
 
         }
-        public static void gameStart(bool isGame, bool isTurn, int turnCounter)
+        public static void gameStart()
         {
             turnCounter = 0;
             isGame = true;

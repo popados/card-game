@@ -5,43 +5,26 @@ using System.Text;
 
 namespace CardGame01
 {
-    class FireDeck
+    public class Deck
     {
 
 
-        public string deckList { get; set; }
+        public List<Deck> deckList { get; set; }
 
         Card player = new FireAvatar();
         WaterCard enemy = new WaterAvatar();
-
-
-        public List<Card> Deck = new List<Card>
-            {
-            //deck created with card objects
-                new ImpCard(), new ImpCard(), new ImpCard(),
-                new LittleDraco(), new LittleDraco(), new LittleDraco(),
-                new SpiritOFire(), new SpiritOFire(), new SpiritOFire(),
-                new FireDrake(), new FireDrake(), new FireDrake(),
-                new FireBall(), new FireBall(), new FireBall(),
-                new FlameStrike(), new FlameStrike(), new FlameStrike(),
-                new WildFire(), new WildFire(), new WildFire()
-            };
-
-
-
-
-
+        public List<Card> currentDeck = new List<Card>() { };
         public List<Card> shuffled = new List<Card>() { };
-        public List<Card> startHand = new List<Card>();
-        public List<Card> fieldArea = new List<Card>();
-        public List<Card> graveyardArea = new List<Card>();
+        public List<Card> startHand = new List<Card> { };
+        public List<Card> fieldArea = new List<Card> { };
+        public List<Card> graveyardArea = new List<Card> { };
         public int deckLen { get; set; }
         public string cardList { get; set; }
 
-        public int printDeckLen()
+        public virtual int printDeckLen()
         {
 
-            deckLen = Deck.Count;
+            deckLen = currentDeck.Count;
             Console.WriteLine("\t length: " + deckLen);
             return deckLen;
         }
@@ -50,23 +33,23 @@ namespace CardGame01
 
             Random ran = new Random();
 
-            int count = Deck.Count;
+            int count = currentDeck.Count;
             int selection = 0;
 
             for (int i = 0; i < count; i++)
             {
-                selection = ran.Next(Deck.Count - 1);
-                shuffled.Add(Deck[selection]);
-                Deck.RemoveAt(selection);
+                selection = ran.Next(currentDeck.Count - 1);
+                shuffled.Add(currentDeck[selection]);
+                currentDeck.RemoveAt(selection);
             }
             return shuffled;
         }
-        public List<Card> printDeckList(List<Card> deck)
+        public List<Card> printDeckList(Deck deck)
         {
 
-            for (int i = 0; i < deck.Count; i++)
+            for (int i = 0; i < currentDeck.Count; i++)
             {
-                Console.WriteLine("list: " + shuffled[i]);
+                Console.WriteLine("\t list: " + shuffled[i]);
 
             }
             return shuffled;
@@ -101,6 +84,19 @@ namespace CardGame01
             startHand.Add(shuffled[0]);
             shuffled.RemoveAt(0);
 
+        }
+
+        internal int Count()
+        {
+            deckLen = currentDeck.Count;
+            Console.WriteLine("\t length: " + deckLen);
+            return deckLen;
+            throw new NotImplementedException();
+        }
+
+        internal void RemoveAt(int selection)
+        {
+            throw new NotImplementedException();
         }
         //Console.WriteLine();
         //Console.WriteLine("Are you going first or second? Press 1 for first and 2 for second.");

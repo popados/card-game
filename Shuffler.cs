@@ -10,7 +10,6 @@ namespace CardGame01
     {
 
 
-        public string deckList { get; set; }
 
         Card player = new FireAvatar();
         Card enemy = new WaterAvatar();
@@ -29,22 +28,29 @@ namespace CardGame01
             };
 
         public List<Card> shuffled = new List<Card>();
-        public List<Card> startHand = new List<Card>();
+
         public List<Card> fieldArea = new List<Card>();
         public List<Card> graveyardArea = new List<Card>();
         public int deckLen { get; set; }
+        public string deckList { get; set; }
 
         public List<Card> printDeckList(List<Card> deck)
         {
-            Console.WriteLine("Got here print deck list");
+            Console.WriteLine("\t Got here print deck list");
             for (int i = 0; i < deck.Count; i++)
             {
-                Console.Write("number: " + i + " ");
-                Console.WriteLine("list: " + shuffled[i]);
-                Console.ReadKey();
-
+                Console.Write("\t number: " + i + " ");
+                Console.WriteLine("\t list: " + shuffled[i]);
             }
             return shuffled;
+        }
+
+        public int printDeckLen()
+        {
+
+            deckLen = Deck.Count;
+            Console.WriteLine("\t length: " + deckLen);
+            return deckLen;
         }
 
         public List<Card> shuffleFunction()
@@ -54,7 +60,7 @@ namespace CardGame01
 
             int count = Deck.Count;
             int selection = 0;
-            Console.WriteLine("shuffling");
+            Console.WriteLine("\t shuffling");
 
             for (int i = 0; i < count; i++)
             {
@@ -64,19 +70,18 @@ namespace CardGame01
             }
             return shuffled;
         }
-        //shuffled deck
-
-        //dont need to print deck
-        //foreach (var card in shuffled)
-        //{
-        //    Console.WriteLine("Deck number: " + (shuffled.IndexOf(card) + 1) + card.ToString());
-        //}
-
-
-
-
-        //could probably change this to if(firstTurn = true) { //draw one } else { //draw two }
-
-
     }
 }
+//shuffled deck
+
+//dont need to print deck
+//foreach (var card in shuffled)
+//{
+//    Console.WriteLine("Deck number: " + (shuffled.IndexOf(card) + 1) + card.ToString());
+//}
+
+
+
+
+//could probably change this to if(firstTurn = true) { //draw one } else { //draw two }
+

@@ -11,6 +11,9 @@ namespace CardGame01
 
         public string deckList { get; set; }
 
+        Card player = new FireAvatar();
+        WaterCard enemy = new WaterAvatar();
+
 
         public List<Card> Deck = new List<Card>
             {
@@ -26,8 +29,6 @@ namespace CardGame01
 
 
 
-        Card player = new FireAvatar();
-        Card enemy = new WaterAvatar();
 
 
         public List<Card> shuffled = new List<Card>() { };
@@ -41,7 +42,7 @@ namespace CardGame01
         {
 
             deckLen = Deck.Count;
-            Console.WriteLine("length: " + deckLen);
+            Console.WriteLine("\t length: " + deckLen);
             return deckLen;
         }
         public List<Card> shuffleFunction()
@@ -66,7 +67,6 @@ namespace CardGame01
             for (int i = 0; i < deck.Count; i++)
             {
                 Console.WriteLine("list: " + shuffled[i]);
-                Console.ReadKey();
 
             }
             return shuffled;
@@ -101,34 +101,34 @@ namespace CardGame01
             startHand.Add(shuffled[0]);
             shuffled.RemoveAt(0);
 
-            //Console.WriteLine();
-            //Console.WriteLine("Are you going first or second? Press 1 for first and 2 for second.");
-            ////create a drawCard function
-            ////if firstTurn
-            ////add one
-            ////else add two
-            //var input = Console.ReadLine();
-            //Int32.TryParse(input, out int result);
-            //switch (result)
-            //{
-            //    case 1:
-            //        Console.WriteLine("Adding one card to your hand.");
-            //        startHand.Add(shuffled[0]);
-            //        shuffled.RemoveAt(0);
-            //        break;
-            //    case 2:
-            //        Console.WriteLine("Adding two cards to your hand.");
-            //        startHand.Add(shuffled[0]);
-            //        shuffled.RemoveAt(0);
-            //        startHand.Add(shuffled[0]);
-            //        shuffled.RemoveAt(0);
-            //        break;
-            //    default:
-            //        isFirstTurn(startHand, shuffled);
-            //        loop
-            //        break;
-            //}
         }
+        //Console.WriteLine();
+        //Console.WriteLine("Are you going first or second? Press 1 for first and 2 for second.");
+        ////create a drawCard function
+        ////if firstTurn
+        ////add one
+        ////else add two
+        //var input = Console.ReadLine();
+        //Int32.TryParse(input, out int result);
+        //switch (result)
+        //{
+        //    case 1:
+        //        Console.WriteLine("Adding one card to your hand.");
+        //        startHand.Add(shuffled[0]);
+        //        shuffled.RemoveAt(0);
+        //        break;
+        //    case 2:
+        //        Console.WriteLine("Adding two cards to your hand.");
+        //        startHand.Add(shuffled[0]);
+        //        shuffled.RemoveAt(0);
+        //        startHand.Add(shuffled[0]);
+        //        shuffled.RemoveAt(0);
+        //        break;
+        //    default:
+        //        isFirstTurn(startHand, shuffled);
+        //        loop
+        //        break;
+        //}
 
     }
 }

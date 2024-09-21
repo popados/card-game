@@ -10,64 +10,53 @@ namespace CardGame01
     {
         public static bool isTurn;
         public static bool isGame;
-        public static int turnCounter;
+        public static int turnCounter { get; set; }
 
-        public static int playerOneMana;
+        public static int playerOneMana { get; set; }
+        public static int playerTwoMana { get; set; }
 
-        public static int playerTwoMana;
 
-
-        public static int playerOneTurn()
+        public static void pOneManaCounter()
         {
-            if (isTurn == true && turnCounter == 0)
-            {
-                playerOneMana++;
-                Console.WriteLine();
-                Console.WriteLine("this is player one");
-                Console.WriteLine("p1 Mana Count: " + playerOneMana);
-                Console.ReadKey();
-                isTurn = false;
-                turnCounter++;
-            }
-
-            else if (isTurn == true && turnCounter > 0)
-            {
-
-                playerOneMana++;
-                Console.WriteLine();
-                Console.WriteLine("player one now has mana: " + playerOneMana);
-                Console.WriteLine(" p1 turn number: " + turnCounter);
-                Console.ReadKey();
-                isTurn = false;
-                turnCounter++;
-
-            }
-            return turnCounter;
-
+            playerOneMana++;
+            Console.WriteLine();
+            Console.WriteLine("\t this player one");
+            Console.WriteLine("\t p1 mana: " + playerOneMana);
         }
-        public static int playerTwoTurn()
+
+        public static void pTwoManaCounter()
+        {
+            playerTwoMana++;
+            Console.WriteLine();
+            Console.WriteLine("\t this is player two");
+            Console.WriteLine("\t p2 Mana Count: " + playerTwoMana);
+        }
+
+        public static int turnTurner(int turn)
+        {
+            turnCounter++;
+            Console.WriteLine();
+            Console.WriteLine("\t turn number: " + turnCounter);
+            Console.ReadKey();
+            playerOneTurn();
+            playerTwoTurn();
+            return turnCounter;
+        }
+        public static int playerOneTurn()
         {
 
             if (isTurn == false && turnCounter > 0)
             {
-                playerTwoMana++;
-                Console.WriteLine();
-                Console.WriteLine("player two now has mana: " + playerTwoMana);
-                Console.WriteLine(" p2 turn number: " + turnCounter);
+                pOneManaCounter();
                 Console.ReadKey();
                 isTurn = true;
-                // turnCounter++;
             }
 
             else if (isTurn == false && turnCounter == 0)
             {
-                playerTwoMana++;
-                Console.WriteLine();
-                Console.WriteLine("this player two");
-                Console.WriteLine("p2 mana: " + playerTwoMana);
+                pOneManaCounter();
                 Console.ReadKey();
                 isTurn = true;
-                // turnCounter++;
             }
 
             else
@@ -81,19 +70,37 @@ namespace CardGame01
 
         }
 
+        public static int playerTwoTurn()
+        {
+            if (isTurn == true && turnCounter == 0)
+            {
+                pTwoManaCounter();
+                Console.ReadKey();
+                isTurn = false;
+                // turnCounter++;
+            }
 
+            else if (isTurn == true && turnCounter > 0)
+            {
+
+                pTwoManaCounter();
+                Console.ReadKey();
+                isTurn = false;
+                // turnCounter++;
+
+            }
+            return turnCounter;
+
+        }
         public static void gameStart(bool isGame, bool isTurn, int turnCounter)
         {
             turnCounter = 0;
             isGame = true;
-            isTurn = true;
+            isTurn = false;
             do
             {
-                playerOneTurn();
-                playerTwoTurn();
-                turnCounter++;
-                Console.WriteLine("turn number: " + turnCounter);
-                if (turnCounter > 21)
+                turnTurner(turnCounter);
+                if (turnCounter >= 21)
                 {
                     isGame = false;
                 }

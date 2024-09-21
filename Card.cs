@@ -70,13 +70,6 @@ namespace CardGame01
     }
     public class ImpCard : Card
     {
-        //string CardName = "Imp";
-        //string CardDescription = "Totally not a Warlock pet.";
-        //string AbilityDescription = "N/A";
-        //string CardType = "Creature";
-        //int Attack = 3;
-        //int Health = 1;
-        //int Cost = 1;
         public ImpCard()
         {
             CardName = "Imp";
@@ -257,21 +250,6 @@ namespace CardGame01
             //no summon sickness for spells
         }
     }
-    public class WaterAvatar : Card
-    {
-        public WaterAvatar()
-        {
-            CardName = "Celiana, Siren of the Sea";
-            CardDescription = "Commander of Water. She gotchu swimming.";
-            AbilityDescription = "I AM THE COMMANDER! HAhaAhaA.";
-            CardType = "Hero/Avatar";
-            Attack = 0;
-            Health = 15;
-            Cost = 0;
-            maxMana = 0;
-            isCreature = false;
-            //no summon sickness for spells
-        }
-    }
+
 }
 

@@ -29,3 +29,4 @@ C:\Users\popad\OneDrive\desktop\git-clones\01-card-game\obj\Debug\net5.0\refint\
 C:\Users\popad\OneDrive\desktop\git-clones\01-card-game\obj\Debug\net5.0\01-card-game.pdb
 C:\Users\popad\OneDrive\desktop\git-clones\01-card-game\obj\Debug\net5.0\01-card-game.genruntimeconfig.cache
 C:\Users\popad\OneDrive\desktop\git-clones\01-card-game\obj\Debug\net5.0\ref\01-card-game.dll
+C:\Users\popad\OneDrive\Desktop\git-clones\01-card-game\obj\Debug\net5.0\01-card-game.sourcelink.json

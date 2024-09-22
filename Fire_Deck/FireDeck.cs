@@ -55,20 +55,21 @@ namespace CardGame01
                 shuffled.Add(Deck[selection]);
                 Deck.RemoveAt(selection);
             }
-            Console.Write("\n \n \t  . . . Shuffling. . . \n \n");
+            Console.Write("\n \t  . . . Shuffling. . . \n \n");
             return shuffled;
         }
         public List<Card> printDeckList()
         {
             // Console.WriteLine("\t here " + shuffled.Count);
-            for (int i = 0; i < shuffled.Count; i++)
+
+            foreach (var card in shuffled)
             {
-                Console.Write("\n " + i + "\t list: " + shuffled[i]);
 
-
+                Console.WriteLine("Card: " + card.ToString());
             }
             return shuffled;
         }
+
         //shuffled deck
 
         //dont need to print deck
@@ -102,7 +103,7 @@ namespace CardGame01
         public void handCreator()
         {
             // Hand hand = new Hand();
-            Console.Write("\n Hand Created \n");
+            Console.WriteLine("\n\t Hand Created \n");
 
             int drawSize = 3;
             int deckIndex = shuffled.Count;
@@ -116,8 +117,7 @@ namespace CardGame01
 
         public void printHand()
         {
-            Console.WriteLine("\n\t ~~~~~~Your Hand~~~~~~");
-            Console.Write("\n\t This is length: " + startHand.Count + "\n");
+            Console.Write("\n\t ~~~~~~Your Hand~~~~~~\n");
 
             foreach (var card in startHand)
             {

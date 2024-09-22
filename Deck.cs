@@ -18,8 +18,8 @@ namespace CardGame01
         public List<Card> startHand = new List<Card> { };
         public List<Card> fieldArea = new List<Card> { };
         public List<Card> graveyardArea = new List<Card> { };
-        public int deckLen { get; set; }
-        public string cardList { get; set; }
+        public virtual int deckLen { get; set; }
+        public virtual string cardList { get; set; }
 
         public virtual int printDeckLen()
         {
@@ -28,7 +28,7 @@ namespace CardGame01
             Console.WriteLine("\t length: " + deckLen);
             return deckLen;
         }
-        public List<Card> shuffleFunction()
+        public virtual List<Card> shuffleFunction()
         {
 
             Random ran = new Random();
@@ -44,7 +44,7 @@ namespace CardGame01
             }
             return shuffled;
         }
-        public List<Card> printDeckList(Deck deck)
+        public virtual List<Card> printDeckList(Deck deck)
         {
 
             for (int i = 0; i < currentDeck.Count; i++)
@@ -63,7 +63,7 @@ namespace CardGame01
         //}
 
 
-        public static void createHand(List<Card> shuffled, List<Card> startHand)
+        public virtual void createHand(List<Card> shuffled, List<Card> startHand)
         {
             int drawSize = 3;
             int deckIndex = shuffled.Count();
@@ -78,7 +78,7 @@ namespace CardGame01
 
 
         //could probably change this to if(firstTurn = true) { //draw one } else { //draw two }
-        public static void drawFunction(List<Card> startHand, List<Card> shuffled)
+        public virtual void drawFunction(List<Card> startHand, List<Card> shuffled)
         {
             Console.WriteLine("Adding one card to your hand.");
             startHand.Add(shuffled[0]);
@@ -86,7 +86,7 @@ namespace CardGame01
 
         }
 
-        internal int Count()
+        internal virtual int Count()
         {
             deckLen = currentDeck.Count;
             Console.WriteLine("\t length: " + deckLen);
@@ -94,7 +94,7 @@ namespace CardGame01
             throw new NotImplementedException();
         }
 
-        internal void RemoveAt(int selection)
+        internal virtual void RemoveAt(int selection)
         {
             throw new NotImplementedException();
         }

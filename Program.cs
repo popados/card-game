@@ -18,7 +18,15 @@ namespace CardGame01
         public static void Main()
         {
 
-            Console.SetWindowSize(150, 40);
+
+
+            // for (int h = 0; h < 35; h++)
+            // {
+            //     Console.SetCursorPosition(0, h);
+            //     Console.WriteLine("*");
+
+            // }
+            Console.SetWindowSize(150, 80);
             for (int i = 0; i < 150; i++)
             {
                 Console.SetCursorPosition(i, 0);
@@ -28,32 +36,27 @@ namespace CardGame01
             }
 
 
-            // for (int h = 0; h < 35; h++)
-            // {
-            //     Console.SetCursorPosition(0, h);
-            //     Console.WriteLine("*");
-
-            // }
-
-
-            Console.SetCursorPosition(50, 5);
+            Console.SetCursorPosition(20, 5);
             Console.WriteLine("\t Hello World!");
             Console.WriteLine();
             Console.ReadKey();
             FireDeck fireDeck = new FireDeck();
             WaterDeck waterDeck = new WaterDeck();
-            Console.Write("\n \t Decks Created. . .");
+            Console.WriteLine("\t. . .Decks Created. . .\n");
+            Console.Clear();
             // Shuffler shuffle = new Shuffler();
             TurnCounter turner = new TurnCounter();
             // turner.PrintHand(fireDeck);
             // shuffle.printDeckList();
             // shuffle.printDeckList(fireDeck);
             // fireDeck.printDeckLen();
-            Console.WriteLine("");
+            // Console.WriteLine("");
             waterDeck.shuffleFunction();
             waterDeck.printDeckList();
             waterDeck.handCreator();
             waterDeck.printHand();
+            Console.ReadKey();
+            Console.SetCursorPosition(20, 5);
             fireDeck.shuffleFunction();
             fireDeck.printDeckList();
             fireDeck.handCreator();

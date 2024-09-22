@@ -70,7 +70,7 @@ namespace CardGame01
         public void handCreator()
         {
             // Hand hand = new Hand();
-            Console.WriteLine("\n\t Hand Created \n");
+            Console.WriteLine("\t Hand Created \n");
 
             int drawSize = 3;
             int deckIndex = shuffled.Count;
@@ -107,17 +107,16 @@ namespace CardGame01
                 shuffled.Add(Deck[selection]);
                 Deck.RemoveAt(selection);
             }
-            Console.Write("\n \t  . . . Shuffling. . . \n \n");
+            Console.Write("\n \n \t  . . . Shuffling. . . \n \n");
             return shuffled;
         }
         public List<Card> printDeckList()
         {
             // Console.WriteLine("\t here " + shuffled.Count);
-
-            foreach (var card in shuffled)
+            for (int i = 0; i < shuffled.Count; i++)
             {
+                Console.Write("\n " + i + "\t list: " + shuffled[i]);
 
-                Console.WriteLine("Card: " + card.ToString());
             }
             return shuffled;
         }

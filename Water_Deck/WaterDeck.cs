@@ -83,14 +83,16 @@ namespace CardGame01
         }
         public void printHand()
         {
+            Console.Write("\n");
             Console.WriteLine("\n\t ~~~~~~Your Hand~~~~~~\n");
             // Console.Write("\n\t This is length: " + startHand.Count + "\n");
 
             foreach (var card in startHand)
             {
 
-                Console.WriteLine("Card: {0} " + card.ToString());
+                Console.WriteLine("Hand: {0} " + card.ToString());
             }
+            Console.Write("\n");
         }
 
         public new List<Card> shuffleFunction()
@@ -107,17 +109,21 @@ namespace CardGame01
                 shuffled.Add(Deck[selection]);
                 Deck.RemoveAt(selection);
             }
-            Console.Write("\n \t  . . . Shuffling. . . \n \n");
+            Console.Write("\n \t  . . . Shuffling. . . \n\n");
             return shuffled;
         }
         public List<Card> printDeckList()
         {
             // Console.WriteLine("\t here " + shuffled.Count);
 
-            foreach (var card in shuffled)
-            {
+            // foreach (var card in shuffled)
+            // {
 
-                Console.WriteLine("Card: " + card.ToString());
+            //     Console.WriteLine("Card: " + card.ToString());
+            // }
+            for (int i = 0; i < shuffled.Count; i++)
+            {
+                Console.WriteLine("Card: " + i + " " + shuffled[i]);
             }
             return shuffled;
         }

@@ -62,10 +62,14 @@ namespace CardGame01
         {
             // Console.WriteLine("\t here " + shuffled.Count);
 
-            foreach (var card in shuffled)
-            {
+            // foreach (var card in shuffled)
+            // {
 
-                Console.WriteLine("Card: " + card.ToString());
+            //     Console.WriteLine("Card: " + card.ToString());
+            // }
+            for (int i = 0; i < shuffled.Count; i++)
+            {
+                Console.WriteLine("Card: " + i + " " + shuffled[i]);
             }
             return shuffled;
         }
@@ -100,7 +104,7 @@ namespace CardGame01
             shuffled.RemoveAt(0);
 
         }
-        public void handCreator()
+        public List<Card> handCreator()
         {
             // Hand hand = new Hand();
             Console.WriteLine("\n\t Hand Created \n");
@@ -113,6 +117,7 @@ namespace CardGame01
                 startHand.Add(shuffled[0]);
                 shuffled.RemoveAt(0);
             }
+            return startHand;
         }
 
         public void printHand()

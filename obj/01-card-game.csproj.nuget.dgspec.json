@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\popad\\OneDrive\\Desktop\\git-clones\\01-card-game\\01-card-game.csproj": {}
+    "C:\\users\\popad\\onedrive\\desktop\\git-clones\\01-card-game\\01-card-game.csproj": {}
   },
   "projects": {
-    "C:\\Users\\popad\\OneDrive\\Desktop\\git-clones\\01-card-game\\01-card-game.csproj": {
+    "C:\\users\\popad\\onedrive\\desktop\\git-clones\\01-card-game\\01-card-game.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\popad\\OneDrive\\Desktop\\git-clones\\01-card-game\\01-card-game.csproj",
+        "projectUniqueName": "C:\\users\\popad\\onedrive\\desktop\\git-clones\\01-card-game\\01-card-game.csproj",
         "projectName": "01-card-game",
-        "projectPath": "C:\\Users\\popad\\OneDrive\\Desktop\\git-clones\\01-card-game\\01-card-game.csproj",
+        "projectPath": "C:\\users\\popad\\onedrive\\desktop\\git-clones\\01-card-game\\01-card-game.csproj",
         "packagesPath": "C:\\Users\\popad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\popad\\OneDrive\\Desktop\\git-clones\\01-card-game\\obj\\",
+        "outputPath": "C:\\users\\popad\\onedrive\\desktop\\git-clones\\01-card-game\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\popad\\AppData\\Roaming\\NuGet\\NuGet.Config"

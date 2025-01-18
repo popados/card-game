@@ -18,32 +18,33 @@ namespace CardGame01
         public static void Main()
         {
 
-
-
-            // for (int h = 0; h < 35; h++)
-            // {
-            //     Console.SetCursorPosition(0, h);
-            //     Console.WriteLine("*");
-
-            // }
-            Console.SetWindowSize(150, 80);
+            // Console.BufferHeight = 200;
+            // Console.SetWindowPosition( );
+            Console.BufferHeight = 49;
+            Console.WindowHeight = 49;
+            Console.WindowWidth = 150;
+            // Console.
+            Console.SetWindowSize(Console.WindowWidth, Console.BufferHeight);
             for (int i = 0; i < 150; i++)
             {
                 Console.SetCursorPosition(i, 0);
-                Console.WriteLine("*");
-
-
+                Console.Write("*");
             }
+            // for (int h = 0; h < 100; h++)
+            // {
+            //     Console.SetCursorPosition(0, h);
+            //     Console.WriteLine("*");
+            // }
 
 
-            Console.SetCursorPosition(20, 5);
             Console.WriteLine("\t Hello World!");
-            Console.WriteLine();
+            // Console.WriteLine(Console.WindowWidth);
+            // Console.WriteLine(Console.WindowHeight);
             Console.ReadKey();
             FireDeck fireDeck = new FireDeck();
             WaterDeck waterDeck = new WaterDeck();
-            Console.WriteLine("\t. . .Decks Created. . .\n");
-            Console.Clear();
+            Console.WriteLine("\t. . .Decks Created. . .");
+            // Console.Clear();
             // Shuffler shuffle = new Shuffler();
             TurnCounter turner = new TurnCounter();
             // turner.PrintHand(fireDeck);
@@ -56,15 +57,17 @@ namespace CardGame01
             waterDeck.handCreator();
             waterDeck.printHand();
             Console.ReadKey();
-            Console.SetCursorPosition(20, 5);
             fireDeck.shuffleFunction();
             fireDeck.printDeckList();
             fireDeck.handCreator();
             fireDeck.printHand();
-            Console.ReadKey();
+            //which steps need to loop until end
+            // Console.ReadKey();
+            Console.Write(" ");
+            Console.Write(" ");
+            fireDeck.playHand();
             // deck.shuffleFunction();
-            // Card mycard = new ImpCard();
-            // mycard.printCard();
+            fireDeck.printHand();
             turner.gameStart();
             Console.WriteLine("got here");
             Console.ReadKey();

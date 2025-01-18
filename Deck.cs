@@ -63,18 +63,18 @@ namespace CardGame01
         //}
 
 
-        public virtual void createHand(List<Card> shuffled, List<Card> startHand)
+        public List<Card> createHand(Deck deck)
         {
             int drawSize = 3;
             int deckIndex = shuffled.Count();
 
             for (int i = 0; i < drawSize; i++)
             {
-                startHand.Add(shuffled[0]);
-                shuffled.RemoveAt(0);
+                deck.startHand.Add(deck.shuffled[0]);
+                deck.shuffled.RemoveAt(0);
             }
+            return deck.startHand;
         }
-
 
 
         //could probably change this to if(firstTurn = true) { //draw one } else { //draw two }
@@ -93,38 +93,100 @@ namespace CardGame01
             return deckLen;
             throw new NotImplementedException();
         }
+        // public List<Card> PrintHand(Deck deck)
+        // {
+        //     Console.WriteLine("~~~~~~Your Hand~~~~~~");
+        //     Console.Write("This is length: " + deck.startHand.Count);
+
+        //     // foreach (var card in deck.startHand)
+        //     // {
+
+        //     //     Console.WriteLine("Card: {0} " + card.ToString(), (deck.startHand.IndexOf(card) + 1));
+        //     // }
+        //     return deck.startHand;
+        // }
+        public List<Card> printHand()
+        {
+
+            Console.Write("\n\t ~~~~~~Your Hand~~~~~~\n");
+            printDeckLen();
+            foreach (var card in startHand)
+            {
+
+                Console.WriteLine("Card: {0} " + card.ToString());
+            }
+            return startHand;
+        }
 
         internal virtual void RemoveAt(int selection)
         {
             throw new NotImplementedException();
         }
-        //Console.WriteLine();
-        //Console.WriteLine("Are you going first or second? Press 1 for first and 2 for second.");
-        ////create a drawCard function
-        ////if firstTurn
-        ////add one
-        ////else add two
-        //var input = Console.ReadLine();
-        //Int32.TryParse(input, out int result);
-        //switch (result)
-        //{
-        //    case 1:
-        //        Console.WriteLine("Adding one card to your hand.");
-        //        startHand.Add(shuffled[0]);
-        //        shuffled.RemoveAt(0);
-        //        break;
-        //    case 2:
-        //        Console.WriteLine("Adding two cards to your hand.");
-        //        startHand.Add(shuffled[0]);
-        //        shuffled.RemoveAt(0);
-        //        startHand.Add(shuffled[0]);
-        //        shuffled.RemoveAt(0);
-        //        break;
-        //    default:
-        //        isFirstTurn(startHand, shuffled);
-        //        loop
-        //        break;
-        //}
+        public List<Card> playHand()
+        {
+            Console.Write("\n\t Enter 1 to see hand. \n\t 2 to play card \n\t 3 to quit \n\t");
+            int numCard = 0;
+            var input = Console.ReadLine();
+            Int32.TryParse(input, out numCard);
+            //will default to 0 if nothing selected
+            //while loop
+            //iterative process
+            // while(cardsInDeck = true) {stuff}
+            //checks conditions if (continue) {++continue; turn counter; }
+            //
+
+            switch (numCard)
+            {
+                case 1:
+                    Console.Write("\n\tPicked 1");
+                    playHand();
+
+
+                    return startHand;
+                // break;
+                case 2:
+                    Console.Write("\n\tPicked 2");
+                    printHand();
+                    playHand();
+                    return startHand;
+                case 3:
+                    Console.Write("\n\tPicked 3");
+                    playHand();
+                    return startHand;
+                default:
+                    Console.Write("\n\tPicked default");
+                    playHand();
+                    return startHand;
+            }
+            throw new NotImplementedException();
+        }
 
     }
 }
+//Console.WriteLine();
+//Console.WriteLine("Are you going first or second? Press 1 for first and 2 for second.");
+////create a drawCard function
+////if firstTurn
+////add one
+////else add two
+//var input = Console.ReadLine();
+//Int32.TryParse(input, out int result);
+//switch (result)
+//{
+//    case 1:
+//        Console.WriteLine("Adding one card to your hand.");
+//        startHand.Add(shuffled[0]);
+//        shuffled.RemoveAt(0);
+//        break;
+//    case 2:
+//        Console.WriteLine("Adding two cards to your hand.");
+//        startHand.Add(shuffled[0]);
+//        shuffled.RemoveAt(0);
+//        startHand.Add(shuffled[0]);
+//        shuffled.RemoveAt(0);
+//        break;
+//    default:
+//        isFirstTurn(startHand, shuffled);
+//        loop
+//        break;
+//}
